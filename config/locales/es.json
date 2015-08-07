@@ -1,4 +1,10 @@
 {
-  "Welcome": "Bienvenido",
-  "A brand new app.": "Una aplicación de la nueva marca."
+  "WebApp Name": "Un solo clic EXO",
+  "TMExo": "TMExo",
+  "Email": "Correo",
+  "Password": "Contraseña",
+  "Sign in": "Validame",
+  "Signing in...": "Validando...",
+  "EXO's manager application": "Herramienta de gestión de la EXO",
+  "If you are from EXO but you have not user, please ask for it.": "Si ya eres usuario de la EXO pero no tienes usuario, pidelo."
 }

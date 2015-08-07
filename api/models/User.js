@@ -49,6 +49,10 @@ module.exports = {
     // url for gravatar
     gravatarUrl: {
       type: 'string'
+    },
+
+    public_ip: {
+      type: 'string'
     }
   }
 };
