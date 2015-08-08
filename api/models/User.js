@@ -51,8 +51,9 @@ module.exports = {
       type: 'string'
     },
 
-    public_ip: {
-      type: 'string'
+    tunnels: {
+      collection: 'tunnel',
+      via: 'owner'
     }
   }
 };
