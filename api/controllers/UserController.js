@@ -79,7 +79,7 @@ module.exports = {
           // the sign-up form --> signup.ejs
             User.create({
               name: req.param('name'),
-              title: req.param('title'),
+              group: 'user',
               email: req.param('email'),
               encryptedPassword: encryptedPassword,
               lastLoggedIn: new Date(),
@@ -139,5 +139,24 @@ module.exports = {
       return res.backToHomePage();
 
     });
-  }
+  },
+
+  /**
+   * List of users
+   *
+   */
+   list: function (req, res) {
+     if (typeof(req.session === 'undefined')) {
+       return res.backToHomePage();
+     }
+     User.findOne(req.session.me, function foundUser(err, user) {
+       if (err) return res.negotiate(err);
+       if (!user) {
+         sails.log.verbose('Session refers to a user who no longer exists.');
+         return res.backToHomePage();
+       }
+       res.view();
+     });
+   }
+
 };

@@ -17,8 +17,8 @@ module.exports = {
     },
 
     // The user's title at their job (or something)
-    // e.g. Genius
-    title: {
+    // e.g.  User, Admin
+    group: {
       type: 'string'
     },
 
